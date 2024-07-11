@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace ProductAPI.Infrastructure.Repository
 {
-    public class BaseRepository<T>: IRepositoryAsync<T> where T : class
+    public class BaseRepositoryAsync<T>: IRepositoryAsync<T> where T : class
     {
         private readonly ProductDbContext _db;
-        public BaseRepository(ProductDbContext db) { this._db = db; }
+        public BaseRepositoryAsync(ProductDbContext db) { this._db = db; }
 
         public async Task<IEnumerable<T>> GetAll()
         {
